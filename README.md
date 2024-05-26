@@ -81,3 +81,7 @@ TypeScript chỉ đơn thuần là JavaScript, nhưng thêm cú pháp về khai 
 rồi trả về mã JavaScript thông thường.
 
 Deno là một runtime mới hơn, tương tự với NodeJS, có thể tương tác với hệ điều hành như đọc file, gửi dữ liệu, ... Deno có thể chạy TypeScript.
+
+## Tạo kết nối
+
+https://github.com/iceghost/yeelight-disco/blob/3838e677f579bc478c93dec628084fb3b2458c8e/main.ts#L1-L7
