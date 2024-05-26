@@ -85,3 +85,5 @@ Deno là một runtime mới hơn, tương tự với NodeJS, có thể tương 
 ## Tạo kết nối
 
 https://github.com/iceghost/yeelight-disco/blob/3838e677f579bc478c93dec628084fb3b2458c8e/main.ts#L1-L7
+
+https://github.com/iceghost/yeelight-disco/blob/3838e677f579bc478c93dec628084fb3b2458c8e/main.ts#L9-L12
