@@ -105,11 +105,11 @@ Bước đầu tiên là tạo kết nối TCP tới đèn.
 Ở đây, API để kết nối TCP là do runtime cung cấp, nên sẽ được Deno cung cấp
 thông qua namespace `Deno`.
 
-https://github.com/iceghost/yeelight-disco/blob/e96a2cfca53bec2ce4dd7543d6bc2fc1ae8ddbe1/main.ts#L1-L8, connection
+https://github.com/iceghost/yeelight-disco/blob/e96a2cfca53bec2ce4dd7543d6bc2fc1ae8ddbe1/main.ts#L1-L8
 
 Tiếp theo, ta gửi dữ liệu đến đèn:
 
-https://github.com/iceghost/yeelight-disco/blob/e96a2cfca53bec2ce4dd7543d6bc2fc1ae8ddbe1/main.ts#L10-L13, send
+https://github.com/iceghost/yeelight-disco/blob/e96a2cfca53bec2ce4dd7543d6bc2fc1ae8ddbe1/main.ts#L10-L13
 
 Ta cần `TextEncoder` để chuyển đổi dữ liệu string sang bytes. Tại sao phải cần
 làm vậy?
@@ -161,7 +161,7 @@ Tuy nhiên, đèn không có phản hồi gì hết!.
 
 Đọc kỹ spec thì các lệnh phải được ngắt bởi CRLF - `\r\n`. Thêm vào:
 
-https://github.com/iceghost/yeelight-disco/blob/4f34ca72c1014900c70fa8f2aeda312b3390a644/main.ts#L12-L12, crlf
+https://github.com/iceghost/yeelight-disco/blob/4f34ca72c1014900c70fa8f2aeda312b3390a644/main.ts#L12-L12
 
 Lúc này đèn đã tắt:
 
@@ -169,7 +169,7 @@ Lúc này đèn đã tắt:
 
 Copy ví dụ về các để chuyển đèn lặp đi lặp lại các trạng thái:
 
-https://github.com/iceghost/yeelight-disco/blob/967dd94739ac609fb0237acf952d215db1916d2b/main.ts#L11-L20, example
+https://github.com/iceghost/yeelight-disco/blob/967dd94739ac609fb0237acf952d215db1916d2b/main.ts#L11-L20
 
 Kết quả:
 
@@ -182,9 +182,9 @@ TODO: viết về spec của request này?
 Mình sẽ thử chuyển cái request này về request để đèn cháy bảy màu cầu vòng, bằng
 cách tạo ra một chuỗi gồm 255 màu:
 
-https://github.com/iceghost/yeelight-disco/blob/a14db1eee49ad6e52df7d77b5789f6cf240d95e0/main.ts#L10-L13, flow
+https://github.com/iceghost/yeelight-disco/blob/a14db1eee49ad6e52df7d77b5789f6cf240d95e0/main.ts#L10-L13
 
-https://github.com/iceghost/yeelight-disco/blob/a14db1eee49ad6e52df7d77b5789f6cf240d95e0/main.ts#L16-L25, write
+https://github.com/iceghost/yeelight-disco/blob/a14db1eee49ad6e52df7d77b5789f6cf240d95e0/main.ts#L16-L25
 
 Mà có vẻ đèn không thích điều này lắm :) Không thấy phản hồi gì hết.
 
@@ -193,7 +193,7 @@ output, để coi lỗi là gì:
 
 TODO: viết về web stream?
 
-https://github.com/iceghost/yeelight-disco/blob/7ff1ee12116ca8246aa9a947316ddd90d1e2815a/main.ts#L26-L26, output
+https://github.com/iceghost/yeelight-disco/blob/7ff1ee12116ca8246aa9a947316ddd90d1e2815a/main.ts#L26-L26
 
 ```console
 $ deno run -A main.ts                                                                                                                                             
@@ -202,9 +202,9 @@ $ deno run -A main.ts
 
 Refactor request ra ngoài để log được:
 
-https://github.com/iceghost/yeelight-disco/blob/cb3d8179b6919b6bda7206ac03e5d34ead189297/main.ts#L15-L20, log req
+https://github.com/iceghost/yeelight-disco/blob/cb3d8179b6919b6bda7206ac03e5d34ead189297/main.ts#L15-L20
 
-https://github.com/iceghost/yeelight-disco/blob/cb3d8179b6919b6bda7206ac03e5d34ead189297/main.ts#L23-L28, write req
+https://github.com/iceghost/yeelight-disco/blob/cb3d8179b6919b6bda7206ac03e5d34ead189297/main.ts#L23-L28
 
 ```console
 $ deno run -A main.ts                                                                                                                                             
@@ -222,7 +222,7 @@ $ deno run -A main.ts
 
 Mình đoán chắc là request to quá. Giảm nó thành một vài màu thôi!
 
-https://github.com/iceghost/yeelight-disco/blob/b53b6d50aa16d6ff98d46f4cd6dd0f0870146b60/main.ts#L10-L13, flow expr
+https://github.com/iceghost/yeelight-disco/blob/b53b6d50aa16d6ff98d46f4cd6dd0f0870146b60/main.ts#L10-L13
 
 Đèn phản hồi:
 
@@ -230,6 +230,6 @@ https://github.com/iceghost/yeelight-disco/assets/40488299/e49feb05-6e70-4adf-a7
 
 Cuối cùng, chuyển nó thành chỉ một vài RGB cho nổi bật và tận hưởng thành quả:
 
-https://github.com/iceghost/yeelight-disco/blob/4c33bde79cd5625a21878576f7ab036a79186e43/main.ts#L10-L13, array
+https://github.com/iceghost/yeelight-disco/blob/4c33bde79cd5625a21878576f7ab036a79186e43/main.ts#L10-L13
 
 https://github.com/iceghost/yeelight-disco/assets/40488299/ab587683-3fb9-45b6-add3-3ce4600273e0
