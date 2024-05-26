@@ -84,6 +84,14 @@ Deno là một runtime mới hơn, tương tự với NodeJS, có thể tương 
 
 ## Tạo kết nối
 
-https://github.com/iceghost/yeelight-disco/blob/3838e677f579bc478c93dec628084fb3b2458c8e/main.ts#L1-L7
-
-https://github.com/iceghost/yeelight-disco/blob/3838e677f579bc478c93dec628084fb3b2458c8e/main.ts#L9-L12
+https://github.com/iceghost/yeelight-disco/blob/71cd69fb0a61b8d478fd1b003d6b89c87fb93335/main.ts#L1-L7
+https://github.com/iceghost/yeelight-disco/blob/71cd69fb0a61b8d478fd1b003d6b89c87fb93335/main.ts#L9-L12
+https://github.com/iceghost/yeelight-disco/blob/7e2083279ddd6edfa2dac92b19292d5042e49f84/main.ts#L11-L11
+https://github.com/iceghost/yeelight-disco/blob/f608d0a97dc5fcaff53ff0393cf42537bb832832/main.ts#L10-L12
+https://github.com/iceghost/yeelight-disco/blob/0f3de92814d184d8e30c064bbac082368225f6a0/main.ts#L9-L12
+https://github.com/iceghost/yeelight-disco/blob/0f3de92814d184d8e30c064bbac082368225f6a0/main.ts#L10-L12
+https://github.com/iceghost/yeelight-disco/blob/c6498a6c3757e98971bf4e7b976b250e35fe9033/main.ts#L25-L25
+https://github.com/iceghost/yeelight-disco/blob/5a7aa946a874624db36e431a14d9e4b96063d52f/main.ts#L14-L19
+https://github.com/iceghost/yeelight-disco/blob/5a7aa946a874624db36e431a14d9e4b96063d52f/main.ts#L10-L12
+https://github.com/iceghost/yeelight-disco/blob/e7469f0e4a950db60f60e9e028a1d14f9e495d82/main.ts#L9-L12
+https://github.com/iceghost/yeelight-disco/blob/03ed7db48b3f3a907188dc00be618a913f73ec05/main.ts#L9-L12
