@@ -1,6 +1,6 @@
 # Yeelight Disco
 
-_TLDR: Mình sẽ trình bày các bước mình đã làm để làm đèn nháy bảy màu trong phòng. Qua dó mình cũng sẽ nói về một số khái niệm
+_TLDR: Mình sẽ trình bày các bước mình đã làm để làm đèn nháy bảy màu trong phòng. Qua đó mình cũng sẽ nói về một số khái niệm
 liên quan, như JS runtime, TCP, UTF-8, ..._
 
 Chuyện là phòng mình có một cây đèn Yeelight. Đèn này có thể được điều khiển bằng điện thoại, có đèn nền nhiều màu sắc.
