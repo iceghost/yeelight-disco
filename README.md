@@ -1,11 +1,14 @@
 # Yeelight Disco
 
+_TLDR: Mình sẽ trình bày các bước mình đã làm để làm đèn nháy bảy màu trong phòng. Qua dó mình cũng sẽ nói về một số khái niệm
+liên quan, như JS runtime, TCP, UTF-8, ..._
+
 Chuyện là phòng mình có một cây đèn Yeelight. Đèn này có thể được điều khiển bằng điện thoại, có đèn nền nhiều màu sắc.
 Tuy nhiên, app chỉ cung cấp một vài hiệu ứng, nhìn khá chán.
 
 ![IMG_1303](https://github.com/iceghost/yeelight-disco/assets/40488299/2673da6d-3db1-4548-bc90-95eda7d0c4ed)
 
-Kết quả làm được như sau:
+Kết quả mình sẽ làm được như sau:
 
 https://github.com/iceghost/yeelight-disco/assets/40488299/ab587683-3fb9-45b6-add3-3ce4600273e0
 
