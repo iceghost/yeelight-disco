@@ -153,14 +153,20 @@ https://github.com/iceghost/yeelight-disco/assets/40488299/add14936-9e15-417f-9f
 
 (Chớp tắt, có lẽ giống như mong muốn)
 
+TODO: viết về spec của request này?
+
+Mình sẽ thử chuyển cái request này về request để đèn cháy bảy màu cầu vòng, bằng cách tạo ra một chuỗi gồm 255 màu:
+
 https://github.com/iceghost/yeelight-disco/blob/0f3de92814d184d8e30c064bbac082368225f6a0/main.ts#L9-L12
 https://github.com/iceghost/yeelight-disco/blob/0f3de92814d184d8e30c064bbac082368225f6a0/main.ts#L14-L24
 
-Log phản hồi của đèn ra ngoài output, để coi lỗi là gì:
+Mà có vẻ đèn không thích điều này lắm :) Không thấy phản hồi gì hết.
 
-https://github.com/iceghost/yeelight-disco/blob/c6498a6c3757e98971bf4e7b976b250e35fe9033/main.ts#L25-L25
+Ngoài chiều gửi thì mình còn có chiều nhận. Log phản hồi của đèn ra ngoài output, để coi lỗi là gì:
 
 TODO: viết về web stream?
+
+https://github.com/iceghost/yeelight-disco/blob/c6498a6c3757e98971bf4e7b976b250e35fe9033/main.ts#L25-L25
 
 ```console
 $ deno run -A main.ts                                                                                                                                             
