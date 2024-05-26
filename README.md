@@ -145,7 +145,7 @@ Lúc này đèn đã tắt:
 
 Copy ví dụ về các để chuyển đèn lặp đi lặp lại các trạng thái:
 
-https://github.com/iceghost/yeelight-disco/blob/f608d0a97dc5fcaff53ff0393cf42537bb832832/main.ts#L10-L12
+https://github.com/iceghost/yeelight-disco/blob/f608d0a97dc5fcaff53ff0393cf42537bb832832/main.ts#L10-L19
 
 Kết quả:
 
