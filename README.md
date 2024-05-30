@@ -24,12 +24,29 @@ người có thể điều khiển đèn qua LAN. Protocol được đăng tải
 
 Protocol được tóm tắt như sau:
 
-- Protocol dựa trên TCP.
+### TCP
 
-  TCP có thể hiểu là một giao thức chuyển dữ liệu ở dạng byte stream (nhiều byte
-  đến liên tục), hai chiều, song song nhau.
+TCP có thể hiểu là một giao thức chuyển dữ liệu ở dạng byte stream (nhiều byte
+đến liên tục), hai chiều, song song nhau.
 
-- Dữ liệu được cấu trúc bằng định dạng JSON.
+### JSON
+
+Khi chuyển dữ liệu bằng byte stream, hai đầu phải thống nhất với nhau về cách đọc byte stream này.
+Ví dụ, 4 byte liên tục nên hiểu là 2 số nguyên 16-bit, hay 1 số nguyên 64-bit? Các byte đó nên được
+hiểu theo endian nào? Làm sao để biết cách ngắt các message từ byte stream này?
+
+Vì vậy mới sinh ra một số định dạng, ví dụ như Protobuf. Protobuf là hai bên thống nhất với nhau về cách
+đọc và ghi các byte, thông qua chia sẻ với nhau bằng một file schema.
+
+Định dạng được sử dụng ở đây là JSON.
+JSON khác với Protobuf ở chỗ chuyển dữ liệu bằng plaintext. Ví dụ, thay vì số 42 được gửi bằng 1 byte `0b00101010`,
+JSON gửi ở dạng hai ký tự ASCII `0b00110100 0b00110010`. Các cấu trúc như mảng, object cũng được định dạng
+bởi các delimiter, các dấu ngoặc và dấu phảy ở plaintext. Điều này gây ra cảm giác hơi thiếu hiệu quả, nhưng nó giải quyết
+được chuyện chuyển dữ liệu giữa hai người không quen biết, không có schema để đọc.
+
+Đó là lý do nó thường được xài bởi các API trên mạng.
+
+## Telnet
 
 Để có thể khám phá một port sử dụng protocol TCP, ta có thể sử dụng `telnet`.
 `telnet` có thể hiểu là một công cụ để pipe input, output vào một protocol sử
@@ -62,12 +79,9 @@ Output:
 {"id":1,"result":["ok"]}
 ```
 
-Như vậy, tóm tắt lại:
-
-- Mở một kết nối TCP tới đèn.
-- Gửi lệnh đến đèn, encode bằng JSON.
-
 ## JavaScript, TypeScript và Deno
+
+Để gửi các nội dung phức tạp hơn, không cần gõ tay thì mình sẽ bắt đầu lập trình.
 
 Bài viết sẽ sử dụng ngôn ngữ TypeScript (JavaScript + type system) và runtime là
 Deno.
