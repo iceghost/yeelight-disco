@@ -22,3 +22,4 @@ await conn.write(
       "\r\n",
   ),
 );
+conn.readable.pipeTo(Deno.stdout.writable);
