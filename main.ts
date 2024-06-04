@@ -8,5 +8,5 @@ const conn = await Deno.connect({
 
 const encoder = new TextEncoder();
 await conn.write(
-  encoder.encode('{"id":1,"method":"set_power","params":["off"]}'),
+  encoder.encode('{"id":1,"method":"set_power","params":["off"]}\r\n'),
 );
