@@ -6,13 +6,18 @@ const conn = await Deno.connect({
   transport: "tcp",
 });
 
+const flow_expr = [];
+for (let rgb = 0; rgb <= 0xFFFFFF; rgb += Math.floor(0xFFFFFF / 255)) {
+  flow_expr.push([20, 1, rgb, -1]);
+}
+
 const encoder = new TextEncoder();
 await conn.write(
   encoder.encode(
     JSON.stringify({
       "id": 1,
-      "method": "start_cf",
-      "params": [4, 2, "1000,2,2700,100,500,1,255,10,5000,7,0,0,500,2,5000,1"],
+      "method": "bg_start_cf",
+      "params": [0, 0, flow_expr.flat().join(",")],
     }) +
       "\r\n",
   ),
