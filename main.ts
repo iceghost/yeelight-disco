@@ -7,8 +7,8 @@ const conn = await Deno.connect({
 });
 
 const flow_expr = [];
-for (let rgb = 0; rgb <= 0xFFFFFF; rgb += Math.floor(0xFFFFFF / 255)) {
-  flow_expr.push([20, 1, rgb, -1]);
+for (let rgb = 0; rgb <= 0xFFFFFF; rgb += Math.floor(0xFFFFFF / 10)) {
+  flow_expr.push([100, 1, rgb, -1]);
 }
 
 const req = {
