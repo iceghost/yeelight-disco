@@ -8,5 +8,12 @@ const conn = await Deno.connect({
 
 const encoder = new TextEncoder();
 await conn.write(
-  encoder.encode('{"id":1,"method":"set_power","params":["off"]}\r\n'),
+  encoder.encode(
+    JSON.stringify({
+      "id": 1,
+      "method": "start_cf",
+      "params": [4, 2, "1000,2,2700,100,500,1,255,10,5000,7,0,0,500,2,5000,1"],
+    }) +
+      "\r\n",
+  ),
 );
